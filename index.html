@@ -21,33 +21,37 @@ html,body{margin:0;padding:0;background:#fff}
 .peot-donate p{margin:0 0 1em}
 .peot-donate h1,.peot-donate h2,.peot-donate h3{font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-dark);line-height:1.2;margin:0 0 .4em;font-weight:bold}
 .pd-wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-.pd-btn{display:inline-block;background:var(--pd-pink);color:#fff !important;text-decoration:none;padding:16px 38px;border-radius:50px;font-size:1.05rem;font-weight:bold;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;box-shadow:0 10px 24px rgba(196,29,114,.28);border:none;cursor:pointer}
-.pd-btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(196,29,114,.4);background:#a8155f;color:#fff !important}
-.pd-btn-lg{padding:20px 52px;font-size:1.2rem}
+.pd-btn{display:inline-flex;align-items:center;gap:8px;background:var(--pd-pink);color:#fff !important;text-decoration:none;padding:16px 38px;border-radius:50px;font-size:1.05rem;font-weight:bold;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;box-shadow:0 10px 26px rgba(196,29,114,.3);border:none;cursor:pointer}
+.pd-btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(196,29,114,.42);background:#a8155f;color:#fff !important}
+.pd-btn-lg{padding:19px 46px;font-size:1.18rem}
+.pd-btn .pd-arr{display:inline-block;font-size:1.15em;line-height:1;transition:transform .2s ease}
+.pd-btn:hover .pd-arr{transform:translateX(-5px)}
 .pd-btn-ghost{background:transparent;color:var(--pd-pink) !important;border:2px solid var(--pd-pink);box-shadow:none}
 .pd-btn-ghost:hover{background:var(--pd-pink);color:#fff !important}
+.pd-link{display:inline-flex;align-items:center;gap:7px;color:var(--pd-pink);font-weight:bold;text-decoration:none;border-bottom:2px solid rgba(196,29,114,.4);padding-bottom:3px;transition:border-color .2s ease}
+.pd-link:hover{border-color:var(--pd-pink)}
 
-/* ===== HERO (video background) ===== */
-.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(92vh,800px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(64px,9vh,112px) 22px 60px;background:radial-gradient(120% 120% at 50% 0%,#5a0530 0%,var(--pd-dark) 55%,#23000f 100%);color:#fff}
+/* ===== HERO (light, video-reveal - matches peot.org.il) ===== */
+.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(94vh,880px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(50px,7vh,88px) 22px 60px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
 .pd-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.pd-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 85%,transparent 100%);
-  mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 85%,transparent 100%)}
+.pd-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%)}
 .pd-hero-media:after{content:"";position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(35,0,15,.9) 0%,rgba(35,0,15,.66) 24%,rgba(54,0,28,.4) 42%,rgba(54,0,28,.15) 60%,rgba(54,0,28,.1) 74%,rgba(35,0,15,.4) 90%,rgba(35,0,15,.72) 100%),
-  radial-gradient(120% 78% at 50% 4%,rgba(196,29,114,.28),transparent 62%)}
-.pd-hero:before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(56% 62% at 80% 14%,rgba(196,29,114,.34),transparent 60%),radial-gradient(48% 54% at 15% 10%,rgba(196,29,114,.22),transparent 60%);pointer-events:none}
+  linear-gradient(to bottom,rgba(253,244,248,.97) 0%,rgba(253,244,248,.93) 18%,rgba(251,234,242,.72) 33%,rgba(251,234,242,.22) 49%,rgba(251,234,242,.05) 65%,rgba(251,234,242,.12) 78%,rgba(253,244,248,.46) 92%,rgba(253,244,248,.74) 100%),
+  radial-gradient(120% 66% at 50% 0%,rgba(196,29,114,.1),transparent 62%)}
+.pd-hero-deco{position:absolute;top:0;left:0;width:100%;height:46%;z-index:1;pointer-events:none;opacity:.6}
 .pd-hero-inner{position:relative;z-index:2;max-width:840px;margin:0 auto}
-.pd-eyebrow{display:inline-block;font-size:.95rem;letter-spacing:.04em;color:#fbd6e8;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:7px 20px;border-radius:50px;margin-bottom:26px;backdrop-filter:blur(4px)}
-.pd-hero h1{color:#fff;font-size:clamp(2.1rem,5.5vw,3.7rem);margin-bottom:.3em;text-shadow:0 2px 30px rgba(35,0,15,.5)}
-.pd-hero h1 span{color:#ffb3d7}
-.pd-lead{font-size:clamp(1.1rem,2.4vw,1.42rem);color:#f6e3ec;max-width:680px;margin:0 auto 2em;text-shadow:0 1px 16px rgba(35,0,15,.55)}
-.pd-hero-sub{font-size:1rem;color:#e6c4d6;margin-top:1.5em;text-shadow:0 1px 12px rgba(35,0,15,.6)}
-.pd-scroll{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;color:#f7c9e0;font-size:1.6rem;line-height:1;animation:pdBounce 2.2s ease-in-out infinite;opacity:.8}
+.pd-eyebrow{display:inline-block;font-size:.9rem;letter-spacing:.05em;color:var(--pd-pink);background:rgba(196,29,114,.07);border:1px solid rgba(196,29,114,.24);padding:7px 20px;border-radius:50px;margin-bottom:22px;font-weight:bold}
+.pd-hero h1{color:var(--pd-dark);font-size:clamp(2.1rem,5.6vw,3.8rem);margin-bottom:.28em;text-shadow:0 1px 14px rgba(255,255,255,.55)}
+.pd-hero h1 span{color:var(--pd-pink)}
+.pd-lead{font-size:clamp(1.1rem,2.4vw,1.42rem);color:#6b3a52;max-width:660px;margin:0 auto 1.7em;text-shadow:0 1px 10px rgba(255,255,255,.75)}
+.pd-hero-cta{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;align-items:center}
+.pd-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;color:var(--pd-pink);font-size:1.5rem;line-height:1;animation:pdBounce 2.2s ease-in-out infinite;opacity:.7}
 @keyframes pdBounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 @media(prefers-reduced-motion:reduce){
   .pd-hero-video{display:none}
-  .pd-hero-media{background:center 30%/cover no-repeat url('peot-hero-poster.jpg')}
+  .pd-hero-media{background:center 55%/cover no-repeat url('peot-hero-poster.jpg')}
   .pd-scroll{animation:none}
 }
 
@@ -102,9 +106,9 @@ html,body{margin:0;padding:0;background:#fff}
 .pd-secure{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.95rem;color:#e6c4d6}
 
 @media(max-width:900px){
-  .pd-hero{min-height:88vh;padding:clamp(56px,8vh,90px) 20px 54px}
-  .pd-hero-video{object-position:center 46%}
-  .pd-hero-media:after{background:linear-gradient(to bottom,rgba(35,0,15,.84) 0%,rgba(35,0,15,.6) 34%,rgba(54,0,28,.36) 60%,rgba(35,0,15,.56) 84%,rgba(35,0,15,.82) 100%),radial-gradient(120% 70% at 50% 2%,rgba(196,29,114,.28),transparent 60%)}
+  .pd-hero{min-height:90vh;padding:clamp(44px,6vh,72px) 20px 54px}
+  .pd-hero-video{object-position:center 52%}
+  .pd-hero-media:after{background:linear-gradient(to bottom,rgba(253,244,248,.96) 0%,rgba(253,244,248,.9) 24%,rgba(251,234,242,.6) 44%,rgba(251,234,242,.15) 62%,rgba(251,234,242,.2) 80%,rgba(253,244,248,.62) 100%),radial-gradient(120% 60% at 50% 0%,rgba(196,29,114,.09),transparent 60%)}
 }
 @media(max-width:600px){.peot-donate{font-size:17px}.pd-sec{padding:60px 0}.pd-value,.pd-final{padding:48px 24px;border-radius:22px}}
 </style>
@@ -116,12 +120,18 @@ html,body{margin:0;padding:0;background:#fff}
       <source src="peot-hero.mp4" type="video/mp4">
     </video>
   </div>
+  <svg class="pd-hero-deco" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-40,150 C 280,40 480,250 760,140 S 1180,30 1480,160" fill="none" stroke="#C41D72" stroke-width="1.4" opacity=".32"/>
+    <path d="M-40,205 C 320,110 520,300 820,190 S 1220,80 1480,210" fill="none" stroke="#C41D72" stroke-width="1" opacity=".2"/>
+  </svg>
   <div class="pd-hero-inner">
     <span class="pd-eyebrow">עמותת שערות בסערות</span>
     <h1>בזכותך, היא נשארת <span>היא</span>.</h1>
     <p class="pd-lead">כל תרומה הופכת לפאה רפואית איכותית מהשיער הטבעי של אישה המתמודדת עם סרטן - ולרגע של ביטחון וכוח בתוך הסערה.</p>
-    <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה שמחזירה חיים</a>
-    <p class="pd-hero-sub">תרומה חד-פעמית או הוראת קבע חודשית - כל סכום, לפי היכולת שלך.</p>
+    <div class="pd-hero-cta">
+      <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה שמחזירה חיים <span class="pd-arr">←</span></a>
+      <a class="pd-link" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">♡ לתרומה חודשית קבועה</a>
+    </div>
   </div>
   <div class="pd-scroll" aria-hidden="true">⌄</div>
 </section>
