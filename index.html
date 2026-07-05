@@ -105,6 +105,22 @@ html,body{margin:0;padding:0;background:#fff}
 .pd-contact .pd-amuta{font-size:.92rem;color:#b394a4}
 .pd-secure{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.95rem;color:#e6c4d6}
 
+/* SECTION 46 / TAX RECOGNITION */
+.pd-tax{max-width:1000px;margin:0 auto;background:#fff;border:1px solid #f3dde8;border-radius:26px;padding:38px 42px;display:flex;align-items:center;gap:34px;box-shadow:0 16px 46px rgba(54,0,28,.09);position:relative;overflow:hidden}
+.pd-tax:before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:6px;background:linear-gradient(180deg,var(--pd-pink),#640838)}
+.pd-tax-badge{flex-shrink:0;width:108px;height:108px;border-radius:50%;background:radial-gradient(circle at 50% 42%,#fff,var(--pd-rose));border:2px dashed var(--pd-pink);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--pd-pink);box-shadow:inset 0 0 0 5px rgba(196,29,114,.08),0 8px 22px rgba(196,29,114,.14)}
+.pd-tax-badge small{font-size:.82rem;letter-spacing:.1em;font-weight:bold;margin-bottom:1px}
+.pd-tax-badge b{font-size:2.5rem;line-height:.9;font-weight:bold}
+.pd-tax-body{flex:1;min-width:0}
+.pd-tax-body h3{font-size:clamp(1.35rem,3vw,1.75rem);color:var(--pd-dark);margin-bottom:.4em}
+.pd-tax-body h3 span{color:var(--pd-pink)}
+.pd-tax-body p{color:var(--pd-muted);font-size:1.06rem;line-height:1.65;margin:0 0 .9em}
+.pd-tax-body .pd-hl{color:var(--pd-pink);font-weight:bold}
+@media(max-width:640px){
+  .pd-tax{flex-direction:column;text-align:center;gap:22px;padding:34px 26px}
+  .pd-tax:before{inset-block:auto;inset-inline:0;top:0;width:auto;height:6px}
+}
+
 @media(max-width:900px){
   .pd-hero{min-height:90vh;padding:clamp(44px,6vh,72px) 20px 54px}
   .pd-hero-video{object-position:center 52%}
@@ -202,6 +218,21 @@ html,body{margin:0;padding:0;background:#fff}
       <div class="pd-amt"><div class="pd-sum">100 ₪</div><p>תורמים למפגש התאמה וליווי אישי לאישה אחת בתחילת הדרך.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
       <div class="pd-amt"><div class="pd-sum">500 ₪</div><p>מסייעים במימון חומרי הגלם לתפירת פאה מהשיער הטבעי של מתמודדת.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
       <div class="pd-amt pd-amt--feat"><div class="pd-sum">סכום אחר / הוראת קבע</div><p>בחרי כל סכום שמתאים לך. תרומה חודשית קבועה מאפשרת לנו לתכנן קדימה וללוות עוד נשים, לאורך זמן.</p><a class="pd-btn" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה חודשית</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 46 / TAX RECOGNITION ===== -->
+<section class="pd-sec pd-sec--soft">
+  <div class="pd-wrap">
+    <div class="pd-tax">
+      <div class="pd-tax-badge" aria-hidden="true"><small>סעיף</small><b>46</b></div>
+      <div class="pd-tax-body">
+        <h3>אישור מס הכנסה לתרומות <span>לפי סעיף 46</span></h3>
+        <p>עמותת שערות בסערות מוכרת על ידי רשות המסים כמוסד ציבורי לעניין תרומות לפי סעיף 46 לפקודת מס הכנסה. המשמעות פשוטה: <b class="pd-hl">כל תרומה מזכה אתכם בהחזר (זיכוי) מס של 35%</b> מסכום התרומה.</p>
+        <p>עם השלמת התרומה נשלחת אליכם קבלה רשמית - שמרו אותה, וההחזר מגיע אליכם בהתאם לתקרות ולמדרגות שקבע החוק.</p>
+        <a class="pd-link" href="https://www.misim.gov.il/gmtrumot/startPage1.aspx" target="_blank" rel="noopener">לבדיקת האישור באתר רשות המסים <span aria-hidden="true">←</span></a>
+      </div>
     </div>
   </div>
 </section>
