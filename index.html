@@ -16,7 +16,7 @@ html,body{margin:0;padding:0;background:#fff}
 <body>
 <div class="peot-donate" dir="rtl">
 <style>
-.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
+.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;--pd-head-h:64px;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
 .peot-donate *{box-sizing:border-box}
 .peot-donate p{margin:0 0 1em}
 .peot-donate h1,.peot-donate h2,.peot-donate h3{font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-dark);line-height:1.2;margin:0 0 .4em;font-weight:bold}
@@ -31,8 +31,36 @@ html,body{margin:0;padding:0;background:#fff}
 .pd-link{display:inline-flex;align-items:center;gap:7px;color:var(--pd-pink);font-weight:bold;text-decoration:none;border-bottom:2px solid rgba(196,29,114,.4);padding-bottom:3px;transition:border-color .2s ease}
 .pd-link:hover{border-color:var(--pd-pink)}
 
+/* ===== SITE HEADER (peot.org.il) ===== */
+.pd-head{position:sticky;top:0;z-index:100;background:#F9E9F2;box-shadow:0 2px 14px rgba(54,0,28,.07)}
+.pd-head-in{max-width:1240px;margin:0 auto;padding:0 22px;height:var(--pd-head-h);display:flex;align-items:center;gap:18px}
+.pd-logo{flex-shrink:0;display:inline-flex;align-items:center}
+.pd-logo img{height:46px;width:auto;display:block}
+.pd-nav{display:flex;align-items:center;gap:4px;margin-inline:auto}
+.pd-nav a{color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1rem;padding:8px 13px;border-radius:9px;white-space:nowrap;transition:color .2s ease,background .2s ease}
+.pd-nav a:hover{color:var(--pd-pink);background:rgba(196,29,114,.07)}
+.pd-head-actions{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.pd-head-tel{display:inline-flex;align-items:center;gap:7px;color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1rem;white-space:nowrap}
+.pd-head-tel svg{width:17px;height:17px;fill:var(--pd-pink);flex-shrink:0}
+.pd-head-tel bdi{direction:ltr}
+.pd-head-tel:hover{color:var(--pd-pink)}
+.pd-head-donate{display:inline-flex;align-items:center;background:var(--pd-pink);color:#fff !important;text-decoration:none;padding:11px 26px;border-radius:50px;font-weight:bold;font-size:1rem;box-shadow:0 8px 20px rgba(196,29,114,.28);white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.pd-head-donate:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(196,29,114,.4);background:#a8155f;color:#fff !important}
+.pd-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:40px;background:none;border:0;cursor:pointer;padding:0;margin-inline-start:auto}
+.pd-burger span{display:block;width:25px;height:2px;margin:0 auto;background:var(--pd-dark);border-radius:2px;transition:.25s}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(2){opacity:0}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.pd-mnav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:#F9E9F2;border-top:1px solid rgba(196,29,114,.12);box-shadow:0 14px 26px rgba(54,0,28,.1);padding:8px 22px 16px}
+.pd-head-toggle:checked ~ .pd-mnav{display:flex}
+.pd-mnav a{color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1.06rem;padding:13px 4px;border-bottom:1px solid rgba(196,29,114,.09)}
+.pd-mnav a:hover{color:var(--pd-pink)}
+.pd-mnav .pd-mnav-donate{margin-top:12px;border-bottom:0;background:var(--pd-pink);color:#fff;text-align:center;border-radius:50px;padding:13px}
+@media(max-width:900px){.pd-nav{display:none}.pd-head-actions{display:none}.pd-burger{display:flex}.pd-head-in{gap:12px}.pd-logo img{height:40px}.peot-donate{--pd-head-h:58px}}
+@media(min-width:901px){.pd-mnav{display:none !important}}
+
 /* ===== HERO (light, video-reveal - matches peot.org.il) ===== */
-.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(94vh,880px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(50px,7vh,88px) 22px 60px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
+.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(84vh,760px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(40px,5vh,66px) 22px 58px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
 .pd-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .pd-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%);
@@ -47,10 +75,10 @@ html,body{margin:0;padding:0;background:#fff}
 .pd-hero h1 span{color:var(--pd-pink)}
 .pd-lead{font-size:clamp(1.1rem,2.4vw,1.42rem);color:#6b3a52;max-width:660px;margin:0 auto 1.7em;text-shadow:0 1px 10px rgba(255,255,255,.75)}
 .pd-hero-cta{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;align-items:center}
-.pd-hero-badge{position:absolute;z-index:3;top:clamp(18px,3.4vh,32px);inset-inline-start:clamp(18px,4vw,44px);display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(196,29,114,.26);border-radius:50px;padding:7px 14px;box-shadow:0 6px 18px rgba(54,0,28,.1);font-size:.82rem;font-weight:bold;color:var(--pd-dark);line-height:1;letter-spacing:.01em}
-.pd-hero-badge .pd-hb-check{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--pd-pink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;box-shadow:0 2px 6px rgba(196,29,114,.4)}
+.pd-hero-badge{position:absolute;z-index:3;top:clamp(24px,3.5vh,38px);inset-inline-start:clamp(20px,4vw,46px);display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(196,29,114,.28);border-radius:50px;padding:9px 18px;box-shadow:0 8px 22px rgba(54,0,28,.12);font-size:.98rem;font-weight:bold;color:var(--pd-dark);line-height:1;letter-spacing:.01em}
+.pd-hero-badge .pd-hb-check{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--pd-pink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.82rem;box-shadow:0 2px 7px rgba(196,29,114,.42)}
 .pd-hero-badge b{color:var(--pd-pink)}
-@media(max-width:600px){.pd-hero-badge{top:13px;inset-inline-start:13px;font-size:.72rem;padding:6px 12px;gap:7px}.pd-hero-badge .pd-hb-check{width:18px;height:18px;font-size:.66rem}}
+@media(max-width:600px){.pd-hero-badge{top:auto;bottom:16px;inset-inline-start:auto;left:50%;right:auto;transform:translateX(-50%);font-size:.88rem;padding:8px 18px;gap:9px;white-space:normal;text-align:center;line-height:1.3;max-width:calc(100vw - 26px);background:rgba(255,255,255,.84)}.pd-hero-badge .pd-hb-check{width:22px;height:22px;font-size:.72rem}.pd-scroll{display:none}}
 .pd-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;color:var(--pd-pink);font-size:1.5rem;line-height:1;animation:pdBounce 2.2s ease-in-out infinite;opacity:.7}
 @keyframes pdBounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 @media(prefers-reduced-motion:reduce){
@@ -126,12 +154,40 @@ html,body{margin:0;padding:0;background:#fff}
 }
 
 @media(max-width:900px){
-  .pd-hero{min-height:90vh;padding:clamp(44px,6vh,72px) 20px 54px}
+  .pd-hero{min-height:calc(100svh - var(--pd-head-h));padding:clamp(28px,4vh,52px) 20px 66px}
   .pd-hero-video{object-position:center 52%}
   .pd-hero-media:after{background:linear-gradient(to bottom,rgba(253,244,248,.96) 0%,rgba(253,244,248,.9) 24%,rgba(251,234,242,.6) 44%,rgba(251,234,242,.15) 62%,rgba(251,234,242,.2) 80%,rgba(253,244,248,.62) 100%),radial-gradient(120% 60% at 50% 0%,rgba(196,29,114,.09),transparent 60%)}
 }
 @media(max-width:600px){.peot-donate{font-size:17px}.pd-sec{padding:60px 0}.pd-value,.pd-final{padding:48px 24px;border-radius:22px}.pd-hero h1{font-size:clamp(1.75rem,6.8vw,2.4rem)}.pd-lead{font-size:1.05rem}.pd-hero-cta{flex-direction:column;gap:14px}.pd-hero-cta .pd-btn{max-width:100%;padding:15px 28px;font-size:1.05rem}}
 </style>
+
+<!-- ===== SITE HEADER (peot.org.il) ===== -->
+<header class="pd-head">
+  <input type="checkbox" id="pd-nav-toggle" class="pd-head-toggle" hidden>
+  <div class="pd-head-in">
+    <a class="pd-logo" href="https://www.peot.org.il/" aria-label="שערות בסערות - לעמוד הבית"><img src="peot-logo.png" alt="שערות בסערות" width="325" height="128"></a>
+    <nav class="pd-nav" aria-label="ניווט ראשי">
+      <a href="https://www.peot.org.il/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a2%d7%9e%d7%95%d7%aa%d7%aa-%d7%a9%d7%a2%d7%a8%d7%95%d7%aa-%d7%91%d7%a1%d7%a2%d7%a8%d7%95%d7%aa/">אודותינו</a>
+      <a href="https://www.peot.org.il/#our-story">הסיפור שלנו</a>
+      <a href="https://www.peot.org.il/#emuna1">נשים מספרות</a>
+      <a href="https://www.peot.org.il/category/blog/">בלוג</a>
+      <a href="https://www.peot.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/">יצירת קשר</a>
+    </nav>
+    <div class="pd-head-actions">
+      <a class="pd-head-tel" href="tel:035687632"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><bdi>03-568-7632</bdi></a>
+      <a class="pd-head-donate" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
+    </div>
+    <label class="pd-burger" for="pd-nav-toggle" aria-label="פתיחת תפריט"><span></span><span></span><span></span></label>
+  </div>
+  <nav class="pd-mnav" aria-label="ניווט נייד">
+    <a href="https://www.peot.org.il/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a2%d7%9e%d7%95%d7%aa%d7%aa-%d7%a9%d7%a2%d7%a8%d7%95%d7%aa-%d7%91%d7%a1%d7%a2%d7%a8%d7%95%d7%aa/">אודותינו</a>
+    <a href="https://www.peot.org.il/#our-story">הסיפור שלנו</a>
+    <a href="https://www.peot.org.il/#emuna1">נשים מספרות</a>
+    <a href="https://www.peot.org.il/category/blog/">בלוג</a>
+    <a href="https://www.peot.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/">יצירת קשר</a>
+    <a class="pd-mnav-donate" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
+  </nav>
+</header>
 
 <!-- ===== HERO ===== -->
 <section class="pd-hero">
@@ -155,7 +211,7 @@ html,body{margin:0;padding:0;background:#fff}
   </div>
   <div class="pd-hero-badge">
     <span class="pd-hb-check" aria-hidden="true">✓</span>
-    <span>מוכר לזיכוי מס לפי <b>סעיף 46</b></span>
+    <span>העמותה מוכרת לזיכוי מס ע"פ <b>סעיף 46</b></span>
   </div>
   <div class="pd-scroll" aria-hidden="true">⌄</div>
 </section>
