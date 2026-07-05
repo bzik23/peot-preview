@@ -1,0 +1,212 @@
+<!-- wp:html -->
+<div class="peot-donate" dir="rtl">
+<style>
+.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
+.peot-donate *{box-sizing:border-box}
+.peot-donate p{margin:0 0 1em}
+.peot-donate h1,.peot-donate h2,.peot-donate h3{font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-dark);line-height:1.2;margin:0 0 .4em;font-weight:bold}
+.pd-wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.pd-btn{display:inline-flex;align-items:center;gap:8px;background:var(--pd-pink);color:#fff !important;text-decoration:none;padding:16px 38px;border-radius:50px;font-size:1.05rem;font-weight:bold;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;box-shadow:0 10px 26px rgba(196,29,114,.3);border:none;cursor:pointer}
+.pd-btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(196,29,114,.42);background:#a8155f;color:#fff !important}
+.pd-btn-lg{padding:19px 46px;font-size:1.18rem}
+.pd-btn .pd-arr{display:inline-block;font-size:1.15em;line-height:1;transition:transform .2s ease}
+.pd-btn:hover .pd-arr{transform:translateX(-5px)}
+.pd-btn-ghost{background:transparent;color:var(--pd-pink) !important;border:2px solid var(--pd-pink);box-shadow:none}
+.pd-btn-ghost:hover{background:var(--pd-pink);color:#fff !important}
+.pd-link{display:inline-flex;align-items:center;gap:7px;color:var(--pd-pink);font-weight:bold;text-decoration:none;border-bottom:2px solid rgba(196,29,114,.4);padding-bottom:3px;transition:border-color .2s ease}
+.pd-link:hover{border-color:var(--pd-pink)}
+
+/* ===== HERO (light, video-reveal - matches peot.org.il) ===== */
+.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(94vh,880px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(50px,7vh,88px) 22px 60px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
+.pd-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.pd-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%)}
+.pd-hero-media:after{content:"";position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(253,244,248,.97) 0%,rgba(253,244,248,.93) 18%,rgba(251,234,242,.72) 33%,rgba(251,234,242,.22) 49%,rgba(251,234,242,.05) 65%,rgba(251,234,242,.12) 78%,rgba(253,244,248,.46) 92%,rgba(253,244,248,.74) 100%),
+  radial-gradient(120% 66% at 50% 0%,rgba(196,29,114,.1),transparent 62%)}
+.pd-hero-deco{position:absolute;top:0;left:0;width:100%;height:46%;z-index:1;pointer-events:none;opacity:.6}
+.pd-hero-inner{position:relative;z-index:2;width:100%;max-width:840px;min-width:0;margin:0 auto}
+.pd-eyebrow{display:inline-block;font-size:.9rem;letter-spacing:.05em;color:var(--pd-pink);background:rgba(196,29,114,.07);border:1px solid rgba(196,29,114,.24);padding:7px 20px;border-radius:50px;margin-bottom:22px;font-weight:bold}
+.pd-hero h1{color:var(--pd-dark);font-size:clamp(2.1rem,5.6vw,3.8rem);margin-bottom:.28em;text-shadow:0 1px 14px rgba(255,255,255,.55)}
+.pd-hero h1 span{color:var(--pd-pink)}
+.pd-lead{font-size:clamp(1.1rem,2.4vw,1.42rem);color:#6b3a52;max-width:660px;margin:0 auto 1.7em;text-shadow:0 1px 10px rgba(255,255,255,.75)}
+.pd-hero-cta{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;align-items:center}
+.pd-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;color:var(--pd-pink);font-size:1.5rem;line-height:1;animation:pdBounce 2.2s ease-in-out infinite;opacity:.7}
+@keyframes pdBounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+@media(prefers-reduced-motion:reduce){
+  .pd-hero-video{display:none}
+  .pd-hero-media{background:center 55%/cover no-repeat url('https://bzik23.github.io/peot-preview/peot-hero-poster.jpg')}
+  .pd-scroll{animation:none}
+}
+
+/* SECTIONS */
+.pd-sec{padding:80px 0}
+.pd-sec--rose{background:linear-gradient(180deg,var(--pd-rose2),#fff)}
+.pd-sec--soft{background:var(--pd-rose2)}
+.pd-sec-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.pd-sec-head h2{font-size:clamp(1.7rem,4vw,2.6rem)}
+.pd-sec-head p{font-size:1.12rem;color:var(--pd-muted)}
+.pd-kicker{display:block;color:var(--pd-pink);font-weight:bold;font-size:1rem;margin-bottom:.5em;letter-spacing:.02em}
+
+/* REALITY */
+.pd-reality{max-width:780px;margin:0 auto;text-align:center;font-size:1.15rem}
+.pd-quote{margin:46px auto 0;max-width:680px;background:#fff;border-radius:22px;padding:38px 36px;box-shadow:0 18px 50px rgba(54,0,28,.1);border-top:5px solid var(--pd-pink);position:relative}
+.pd-quote p{font-size:clamp(1.3rem,3vw,1.7rem);color:var(--pd-dark);font-weight:bold;line-height:1.45;margin:0}
+.pd-quote span{display:block;margin-top:16px;font-size:1rem;font-weight:normal;color:var(--pd-muted)}
+
+/* CARDS */
+.pd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.pd-card{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 12px 34px rgba(54,0,28,.08);border:1px solid #f3dde8;transition:transform .25s ease,box-shadow .25s ease}
+.pd-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(196,29,114,.16)}
+.pd-card .pd-ico{font-size:2.2rem;display:block;margin-bottom:14px}
+.pd-card h3{font-size:1.3rem;color:var(--pd-pink)}
+.pd-card p{color:var(--pd-muted);font-size:1.02rem;margin:0}
+
+/* VALUE / STATS */
+.pd-value{background:linear-gradient(135deg,var(--pd-dark),#640838);color:#fff;border-radius:28px;padding:56px 40px;text-align:center;max-width:980px;margin:0 auto}
+.pd-value h2{color:#fff}
+.pd-value p{color:#f1d8e4;font-size:1.15rem;max-width:720px;margin:0 auto 8px}
+.pd-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin-top:44px}
+.pd-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:26px 18px}
+.pd-stat b{display:block;font-size:2rem;color:#ffb3d7;line-height:1.1;margin-bottom:8px}
+.pd-stat small{font-size:1rem;color:#f1d8e4}
+
+/* AMOUNTS */
+.pd-amounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1000px;margin:0 auto}
+.pd-amt{background:#fff;border:2px solid #f3dde8;border-radius:22px;padding:30px 26px;text-align:center;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.pd-amt:hover{transform:translateY(-6px);border-color:var(--pd-pink);box-shadow:0 20px 46px rgba(196,29,114,.18)}
+.pd-amt .pd-sum{font-size:2.3rem;font-weight:bold;color:var(--pd-pink);line-height:1;margin-bottom:14px}
+.pd-amt p{color:var(--pd-muted);font-size:1.02rem;flex:1;margin-bottom:22px}
+.pd-amt--feat{background:linear-gradient(160deg,#fff,var(--pd-rose));border-color:var(--pd-pink)}
+.pd-amt--feat .pd-sum{font-size:1.7rem}
+
+/* FINAL CTA */
+.pd-final{text-align:center;background:radial-gradient(120% 140% at 50% 0%,#5a0530,var(--pd-dark));color:#fff;border-radius:28px;padding:72px 36px;max-width:980px;margin:0 auto}
+.pd-final h2{color:#fff;font-size:clamp(1.8rem,4vw,2.7rem);max-width:680px;margin:0 auto .5em}
+.pd-final p{color:#f1d8e4;font-size:1.15rem;max-width:600px;margin:0 auto 2em}
+.pd-contact{margin-top:54px;text-align:center;color:var(--pd-muted);font-size:1rem;line-height:2}
+.pd-contact a{color:var(--pd-pink);text-decoration:none;font-weight:bold}
+.pd-contact .pd-amuta{font-size:.92rem;color:#b394a4}
+.pd-secure{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.95rem;color:#e6c4d6}
+
+@media(max-width:900px){
+  .pd-hero{min-height:90vh;padding:clamp(44px,6vh,72px) 20px 54px}
+  .pd-hero-video{object-position:center 52%}
+  .pd-hero-media:after{background:linear-gradient(to bottom,rgba(253,244,248,.96) 0%,rgba(253,244,248,.9) 24%,rgba(251,234,242,.6) 44%,rgba(251,234,242,.15) 62%,rgba(251,234,242,.2) 80%,rgba(253,244,248,.62) 100%),radial-gradient(120% 60% at 50% 0%,rgba(196,29,114,.09),transparent 60%)}
+}
+@media(max-width:600px){.peot-donate{font-size:17px}.pd-sec{padding:60px 0}.pd-value,.pd-final{padding:48px 24px;border-radius:22px}.pd-hero h1{font-size:clamp(1.75rem,6.8vw,2.4rem)}.pd-lead{font-size:1.05rem}.pd-hero-cta{flex-direction:column;gap:14px}.pd-hero-cta .pd-btn{max-width:100%;padding:15px 28px;font-size:1.05rem}}
+</style>
+
+<!-- ===== HERO ===== -->
+<section class="pd-hero">
+  <div class="pd-hero-media" aria-hidden="true">
+    <video class="pd-hero-video" autoplay muted loop playsinline preload="auto" poster="https://bzik23.github.io/peot-preview/peot-hero-poster.jpg" tabindex="-1">
+      <source src="https://bzik23.github.io/peot-preview/peot-hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <svg class="pd-hero-deco" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-40,150 C 280,40 480,250 760,140 S 1180,30 1480,160" fill="none" stroke="#C41D72" stroke-width="1.4" opacity=".32"/>
+    <path d="M-40,205 C 320,110 520,300 820,190 S 1220,80 1480,210" fill="none" stroke="#C41D72" stroke-width="1" opacity=".2"/>
+  </svg>
+  <div class="pd-hero-inner">
+    <span class="pd-eyebrow">עמותת שערות בסערות</span>
+    <h1>בזכותך, היא נשארת <span>היא</span>.</h1>
+    <p class="pd-lead">כל תרומה הופכת לפאה רפואית איכותית מהשיער הטבעי של אישה המתמודדת עם סרטן - ולרגע של ביטחון וכוח בתוך הסערה.</p>
+    <div class="pd-hero-cta">
+      <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה שמחזירה חיים <span class="pd-arr">←</span></a>
+      <a class="pd-link" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">♡ לתרומה חודשית קבועה</a>
+    </div>
+  </div>
+  <div class="pd-scroll" aria-hidden="true">⌄</div>
+</section>
+
+<!-- ===== THE REALITY ===== -->
+<section class="pd-sec pd-sec--rose">
+  <div class="pd-wrap">
+    <div class="pd-sec-head">
+      <span class="pd-kicker">מאחורי כל פאה</span>
+      <h2>אישה, באמצע המלחמה הכי קשה בחייה</h2>
+    </div>
+    <div class="pd-reality">
+      <p>אבחנה של סרטן משנה הכול ברגע אחד. ובתוך כל הפחד, הטיפולים והאי-ודאות, מגיע עוד אובדן כואב - נשירת השיער. כי שיער הוא לא רק שיער. הוא חלק מהזהות, מהזיכרונות, ומהדרך שבה אישה רואה את עצמה במראה.</p>
+      <p>באותה תקופה בדיוק ההוצאות נערמות: הטיפולים עצמם, עזרה בבית, שיעורים פרטיים לילדים, ותמיכה במשפחה כולה. פאה רפואית איכותית במספרה עולה כ-20,000 ש"ח - סכום שפשוט לא מתאפשר עבור רוב הנשים, בדיוק בתקופה הכי שברירית בחייהן.</p>
+    </div>
+    <blockquote class="pd-quote">
+      <p>"אני לא רוצה שהילדים שלי יראו אותי קירחת."</p>
+      <span>המשפט שאמרה אישה אחת בסלון שלנו, ובזכותו נולדה העמותה.</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== WHAT WE DO ===== -->
+<section class="pd-sec">
+  <div class="pd-wrap">
+    <div class="pd-sec-head">
+      <span class="pd-kicker">מה התרומה שלך מפעילה</span>
+      <h2>אנחנו לא מוכרות פאה. אנחנו מלוות אישה.</h2>
+      <p>מהרגע הראשון ועד שהשיער חוזר לצמוח - מעטפת שלמה, אישית וחמה.</p>
+    </div>
+    <div class="pd-grid">
+      <div class="pd-card"><span class="pd-ico">🎀</span><h3>פאה מהשיער שלה</h3><p>פאה רפואית בהתאמה אישית, עשויה מהשיער הטבעי של המתמודדת או משיער טבעי שנתרם. מדהימה, יפה וטבעית לחלוטין.</p></div>
+      <div class="pd-card"><span class="pd-ico">🤝</span><h3>ליווי אישי צמוד</h3><p>מהמפגש הראשון, דרך התאמות מדויקות, ועד שהשיער מתחיל לצמוח מחדש. את אף פעם לא לבד.</p></div>
+      <div class="pd-card"><span class="pd-ico">🚗</span><h3>נגישות מלאה</h3><p>אנחנו מגיעות לבתי חולים, לבתים פרטיים ולכל מקום שבו אתן זקוקות לנו.</p></div>
+      <div class="pd-card"><span class="pd-ico">⏱️</span><h3>תהליך מהיר ורגיש</h3><p>מותאם לקצב נשירת השיער, כדי שלא יהיה רגע אחד שבו השיער נושר ואין פאה.</p></div>
+      <div class="pd-card"><span class="pd-ico">🌱</span><h3>פתרון לשלב ההחלמה</h3><p>כשהשיער חוזר לצמוח, אנחנו מציעות הלחמת שיער בהתאמה אישית שמקלה על המעבר והחזרה לשגרה.</p></div>
+      <div class="pd-card"><span class="pd-ico">💗</span><h3>קהילה חמה</h3><p>מעטפת של נשים שבאמת מבינות מה את עוברת, ומלוות אותך בכל צעד.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DONOR VALUE ===== -->
+<section class="pd-sec pd-sec--soft">
+  <div class="pd-wrap">
+    <div class="pd-value">
+      <span class="pd-kicker" style="color:#ffb3d7">הערך שאת נותנת</span>
+      <h2>הבחירה שאף אישה לא צריכה לוותר עליה</h2>
+      <p>בזכות התורמים, אישה לא צריכה לבחור בין פאה איכותית לבין ההוצאות של הטיפול והמשפחה. היא ממשיכה להיות עצמה - מקבלת פאה מהשיער הטבעי שלה, יפה ומרשימה, בלי לשבור את החסכונות ובלי לוותר על שום דבר אחר.</p>
+      <div class="pd-stats">
+        <div class="pd-stat"><b>20,000 ש"ח</b><small>עלות פאה רפואית במספרה</small></div>
+        <div class="pd-stat"><b>מסובסד</b><small>בזכותך, במחיר שכל אישה יכולה לעמוד בו</small></div>
+        <div class="pd-stat"><b>מאות פאות</b><small>ואלפי נשים שכבר ליווינו בדרך</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMOUNTS ===== -->
+<section class="pd-sec pd-sec--rose">
+  <div class="pd-wrap">
+    <div class="pd-sec-head">
+      <span class="pd-kicker">בחרי סכום, ראי את ההשפעה</span>
+      <h2>כל סכום הופך לרגע של ביטחון</h2>
+      <p>תרומה חד-פעמית או הוראת קבע חודשית - כל אחת ואחד לפי היכולת. כל שקל מקרב עוד אישה לרגע שבו היא מסתכלת במראה ומחייכת.</p>
+    </div>
+    <div class="pd-amounts">
+      <div class="pd-amt"><div class="pd-sum">50 ₪</div><p>משתתפים בערכת טיפוח ותחזוקה שתשמור על הפאה יפה וטבעית לאורך זמן.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+      <div class="pd-amt"><div class="pd-sum">100 ₪</div><p>תורמים למפגש התאמה וליווי אישי לאישה אחת בתחילת הדרך.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+      <div class="pd-amt"><div class="pd-sum">500 ₪</div><p>מסייעים במימון חומרי הגלם לתפירת פאה מהשיער הטבעי של מתמודדת.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+      <div class="pd-amt pd-amt--feat"><div class="pd-sum">סכום אחר / הוראת קבע</div><p>בחרי כל סכום שמתאים לך. תרומה חודשית קבועה מאפשרת לנו לתכנן קדימה וללוות עוד נשים, לאורך זמן.</p><a class="pd-btn" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה חודשית</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="pd-sec">
+  <div class="pd-wrap">
+    <div class="pd-final">
+      <h2>תני יד אחת, ותחזירי לאישה את עצמה</h2>
+      <p>כל תרומה היא הרבה יותר מפאה. היא ביטחון, כבוד, וכוח להמשיך להילחם. תודה שאתם איתנו.</p>
+      <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה מאובטחת</a>
+      <div class="pd-secure">🔒 תרומה מאובטחת דרך מערכת הסליקה משולם</div>
+    </div>
+    <div class="pd-contact">
+      <p>רוצים לתרום בדרך אחרת או לשמוע עוד? אנחנו כאן.<br>
+      טלפון ווואטסאפ: <a href="tel:035687632">03-568-7632</a><br>
+      כתובות: אמרי חיים 14, בני ברק | הגליל 8, חיפה</p>
+      <p class="pd-amuta">עמותת שערות בסערות (ע"ר) | מספר עמותה 580763225</p>
+    </div>
+  </div>
+</section>
+</div>
+<!-- /wp:html -->
