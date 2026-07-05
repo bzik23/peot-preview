@@ -16,7 +16,7 @@ html,body{margin:0;padding:0;background:#fff}
 <body>
 <div class="peot-donate" dir="rtl">
 <style>
-.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;--pd-head-h:64px;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
+.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;--pd-head-h:96px;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
 .peot-donate *{box-sizing:border-box}
 .peot-donate p{margin:0 0 1em}
 .peot-donate h1,.peot-donate h2,.peot-donate h3{font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-dark);line-height:1.2;margin:0 0 .4em;font-weight:bold}
@@ -31,33 +31,30 @@ html,body{margin:0;padding:0;background:#fff}
 .pd-link{display:inline-flex;align-items:center;gap:7px;color:var(--pd-pink);font-weight:bold;text-decoration:none;border-bottom:2px solid rgba(196,29,114,.4);padding-bottom:3px;transition:border-color .2s ease}
 .pd-link:hover{border-color:var(--pd-pink)}
 
-/* ===== SITE HEADER (peot.org.il) ===== */
-.pd-head{position:sticky;top:0;z-index:100;background:#F9E9F2;box-shadow:0 2px 14px rgba(54,0,28,.07)}
-.pd-head-in{max-width:1240px;margin:0 auto;padding:0 22px;height:var(--pd-head-h);display:flex;align-items:center;gap:18px}
+/* ===== SITE HEADER (זהה ל-peot.org.il, tpl 464) ===== */
+.pd-head{position:sticky;top:0;z-index:100;background:#F9E9F2;box-shadow:0 2px 14px rgba(54,0,28,.06)}
+.pd-head-in{max-width:1760px;margin:0 auto;padding:0 5%;min-height:var(--pd-head-h);display:flex;align-items:center;gap:22px}
 .pd-logo{flex-shrink:0;display:inline-flex;align-items:center}
-.pd-logo img{height:46px;width:auto;display:block}
-.pd-nav{display:flex;align-items:center;gap:4px;margin-inline:auto}
-.pd-nav a{color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1rem;padding:8px 13px;border-radius:9px;white-space:nowrap;transition:color .2s ease,background .2s ease}
-.pd-nav a:hover{color:var(--pd-pink);background:rgba(196,29,114,.07)}
-.pd-head-actions{display:flex;align-items:center;gap:16px;flex-shrink:0}
-.pd-head-tel{display:inline-flex;align-items:center;gap:7px;color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1rem;white-space:nowrap}
-.pd-head-tel svg{width:17px;height:17px;fill:var(--pd-pink);flex-shrink:0}
-.pd-head-tel bdi{direction:ltr}
+.pd-logo img{height:62px;width:auto;display:block}
+.pd-nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.pd-nav a{color:var(--pd-dark);text-decoration:none;font-weight:500;font-size:20px;padding:10px 13px;border-radius:8px;white-space:nowrap;transition:color .25s ease}
+.pd-nav a:hover{color:var(--pd-pink)}
+.pd-head-tel{display:inline-flex;align-items:center;gap:9px;color:var(--pd-dark);text-decoration:none;font-weight:600;font-size:20px;letter-spacing:1px;white-space:nowrap;margin-inline-start:auto;flex-shrink:0;transition:color .25s ease}
 .pd-head-tel:hover{color:var(--pd-pink)}
-.pd-head-donate{display:inline-flex;align-items:center;background:var(--pd-pink);color:#fff !important;text-decoration:none;padding:11px 26px;border-radius:50px;font-weight:bold;font-size:1rem;box-shadow:0 8px 20px rgba(196,29,114,.28);white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-.pd-head-donate:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(196,29,114,.4);background:#a8155f;color:#fff !important}
-.pd-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:40px;background:none;border:0;cursor:pointer;padding:0;margin-inline-start:auto}
-.pd-burger span{display:block;width:25px;height:2px;margin:0 auto;background:var(--pd-dark);border-radius:2px;transition:.25s}
+.pd-tel-ico{width:33px;height:33px;flex-shrink:0;display:block}
+.pd-head-tel bdi{direction:ltr}
+.pd-head-m{display:none;align-items:center;gap:12px;margin-inline-start:auto}
+.pd-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:40px;background:none;border:0;cursor:pointer;padding:0}
+.pd-burger span{display:block;width:26px;height:2px;margin:0 auto;background:var(--pd-dark);border-radius:2px;transition:.25s}
 .pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(2){opacity:0}
 .pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.pd-mnav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:#F9E9F2;border-top:1px solid rgba(196,29,114,.12);box-shadow:0 14px 26px rgba(54,0,28,.1);padding:8px 22px 16px}
+.pd-mnav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:#F9E9F2;border-top:1px solid rgba(196,29,114,.12);box-shadow:0 14px 26px rgba(54,0,28,.1);padding:8px 5% 16px}
 .pd-head-toggle:checked ~ .pd-mnav{display:flex}
-.pd-mnav a{color:var(--pd-dark);text-decoration:none;font-weight:bold;font-size:1.06rem;padding:13px 4px;border-bottom:1px solid rgba(196,29,114,.09)}
+.pd-mnav a{color:var(--pd-dark);text-decoration:none;font-weight:500;font-size:1.15rem;padding:13px 4px;border-bottom:1px solid rgba(196,29,114,.09)}
 .pd-mnav a:hover{color:var(--pd-pink)}
-.pd-mnav .pd-mnav-donate{margin-top:12px;border-bottom:0;background:var(--pd-pink);color:#fff;text-align:center;border-radius:50px;padding:13px}
-@media(max-width:900px){.pd-nav{display:none}.pd-head-actions{display:none}.pd-burger{display:flex}.pd-head-in{gap:12px}.pd-logo img{height:40px}.peot-donate{--pd-head-h:58px}}
-@media(min-width:901px){.pd-mnav{display:none !important}}
+@media(max-width:1024px){.pd-nav{display:none}.pd-head-tel{display:none}.pd-head-m{display:flex}.pd-burger{display:flex}.pd-logo img{height:46px}.peot-donate{--pd-head-h:70px}}
+@media(min-width:1025px){.pd-mnav{display:none !important}.pd-head-m{display:none !important}}
 
 /* ===== HERO (light, video-reveal - matches peot.org.il) ===== */
 .pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(84vh,760px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(40px,5vh,66px) 22px 58px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
@@ -161,7 +158,8 @@ html,body{margin:0;padding:0;background:#fff}
 @media(max-width:600px){.peot-donate{font-size:17px}.pd-sec{padding:60px 0}.pd-value,.pd-final{padding:48px 24px;border-radius:22px}.pd-hero h1{font-size:clamp(1.75rem,6.8vw,2.4rem)}.pd-lead{font-size:1.05rem}.pd-hero-cta{flex-direction:column;gap:14px}.pd-hero-cta .pd-btn{max-width:100%;padding:15px 28px;font-size:1.05rem}}
 </style>
 
-<!-- ===== SITE HEADER (peot.org.il) ===== -->
+<!-- ===== SITE HEADER (זהה ל-peot.org.il) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="pd-phone-clip"><rect width="18" height="18" fill="white" transform="translate(7.5 7.5)"></rect></clipPath><symbol id="pd-phone-ico" viewBox="0 0 33 33"><circle cx="16.5" cy="16.5" r="16.5" fill="#36001C"></circle><g clip-path="url(#pd-phone-clip)"><path fill="white" d="M18.7744 9.33252C18.7923 9.26555 18.8232 9.20276 18.8653 9.14774C18.9074 9.09272 18.96 9.04654 19.02 9.01185C19.08 8.97716 19.1462 8.95463 19.2149 8.94556C19.2837 8.93649 19.3535 8.94105 19.4204 8.95898C20.6941 9.29123 21.8562 9.95703 22.787 10.8878C23.7178 11.8186 24.3836 12.9807 24.7158 14.2544C24.7338 14.3213 24.7383 14.3912 24.7293 14.4599C24.7202 14.5286 24.6977 14.5948 24.663 14.6548C24.6283 14.7148 24.5821 14.7674 24.5271 14.8095C24.472 14.8517 24.4093 14.8825 24.3423 14.9004C24.2978 14.9122 24.252 14.9181 24.2061 14.918C24.0899 14.918 23.9769 14.8797 23.8847 14.809C23.7926 14.7383 23.7263 14.6391 23.6963 14.5269C23.4111 13.4328 22.8392 12.4346 22.0397 11.6351C21.2403 10.8356 20.242 10.2638 19.148 9.97851C19.081 9.96066 19.0182 9.92978 18.9632 9.88765C18.9082 9.84551 18.862 9.79294 18.8273 9.73294C18.7926 9.67295 18.7701 9.6067 18.761 9.53799C18.7519 9.46928 18.7565 9.39946 18.7744 9.33252ZM18.4448 12.791C19.7236 13.132 20.5428 13.9512 20.8838 15.23C20.9138 15.3422 20.9801 15.4414 21.0722 15.5121C21.1644 15.5829 21.2774 15.6212 21.3936 15.6211C21.4395 15.6212 21.4853 15.6153 21.5298 15.6035C21.5968 15.5857 21.6596 15.5548 21.7146 15.5126C21.7696 15.4705 21.8158 15.4179 21.8505 15.3579C21.8852 15.2979 21.9077 15.2317 21.9168 15.163C21.9258 15.0943 21.9213 15.0245 21.9033 14.9575C21.4639 13.3131 20.3617 12.2109 18.7173 11.7715C18.6504 11.7536 18.5805 11.7491 18.5118 11.7582C18.4432 11.7672 18.3769 11.7898 18.3169 11.8245C18.2569 11.8591 18.2044 11.9053 18.1622 11.9603C18.1201 12.0153 18.0892 12.0781 18.0713 12.145C18.0534 12.212 18.0489 12.2818 18.058 12.3505C18.0671 12.4192 18.0896 12.4854 18.1243 12.5454C18.159 12.6054 18.2051 12.6579 18.2601 12.7001C18.3151 12.7422 18.3779 12.7731 18.4448 12.791ZM25.4269 21.3164C25.2763 22.4653 24.7125 23.5201 23.8408 24.2836C22.9691 25.0471 21.8492 25.467 20.6904 25.4648C13.8086 25.4648 8.20997 19.8662 8.20997 12.9844C8.20775 11.826 8.62729 10.7065 9.39023 9.83483C10.1532 8.9632 11.2073 8.39912 12.3558 8.24795C12.6201 8.21582 12.8878 8.27033 13.1186 8.4033C13.3493 8.53627 13.5307 8.74051 13.6355 8.98535L15.49 13.125C15.5718 13.3124 15.6057 13.5173 15.5885 13.7211C15.5713 13.9248 15.5036 14.1211 15.3915 14.2922C15.3802 14.3096 15.3679 14.3263 15.3546 14.3423L13.5027 16.5448C13.4915 16.5677 13.4857 16.5928 13.4857 16.6182C13.4857 16.6437 13.4915 16.6688 13.5027 16.6916C14.176 18.0697 15.6209 19.5041 17.0184 20.1765C17.0417 20.1871 17.0672 20.1922 17.0928 20.1912C17.1184 20.1903 17.1435 20.1835 17.166 20.1712L19.336 18.3255C19.3516 18.312 19.368 18.2997 19.3853 18.2886C19.5555 18.175 19.7515 18.1058 19.9553 18.0871C20.1591 18.0683 20.3643 18.1007 20.5525 18.1813L24.7044 20.042C24.946 20.1491 25.1467 20.3311 25.2768 20.5611C25.4069 20.791 25.4595 21.0568 25.4269 21.319V21.3164ZM24.3818 21.1863C24.3848 21.1496 24.3761 21.1128 24.357 21.0813C24.3379 21.0497 24.3094 21.025 24.2755 21.0105L20.1227 19.1499C20.1 19.1411 20.0757 19.1374 20.0514 19.1389C20.0271 19.1404 20.0035 19.1472 19.982 19.1587L17.8129 21.0044C17.7971 21.0176 17.7804 21.0299 17.7637 21.0413C17.5867 21.1593 17.3822 21.2294 17.1701 21.2448C16.958 21.2602 16.7456 21.2204 16.5534 21.1292C14.9398 20.3496 13.3314 18.7562 12.5518 17.1574C12.4601 16.9664 12.4193 16.755 12.4333 16.5435C12.4473 16.3321 12.5156 16.1279 12.6317 15.9507C12.6431 15.9331 12.6558 15.9164 12.6695 15.9006L14.5196 13.6954C14.5302 13.6724 14.5357 13.6474 14.5357 13.622C14.5357 13.5967 14.5302 13.5717 14.5196 13.5486L12.6695 9.4081C12.6573 9.37485 12.6353 9.34607 12.6065 9.32552C12.5776 9.30498 12.5432 9.29363 12.5078 9.29297H12.4876C11.5937 9.41188 10.7736 9.85208 10.1806 10.5314C9.58747 11.2107 9.26191 12.0826 9.26466 12.9844C9.26466 19.2844 14.3904 24.4102 20.6904 24.4102C21.5923 24.4129 22.4644 24.0872 23.1437 23.4939C23.823 22.9007 24.2631 22.0804 24.3818 21.1863Z"></path></g></symbol></defs></svg>
 <header class="pd-head">
   <input type="checkbox" id="pd-nav-toggle" class="pd-head-toggle" hidden>
   <div class="pd-head-in">
@@ -172,12 +170,13 @@ html,body{margin:0;padding:0;background:#fff}
       <a href="https://www.peot.org.il/#emuna1">נשים מספרות</a>
       <a href="https://www.peot.org.il/category/blog/">בלוג</a>
       <a href="https://www.peot.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/">יצירת קשר</a>
+      <a href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
     </nav>
-    <div class="pd-head-actions">
-      <a class="pd-head-tel" href="tel:035687632"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><bdi>03-568-7632</bdi></a>
-      <a class="pd-head-donate" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
+    <a class="pd-head-tel" href="tel:035687632"><svg class="pd-tel-ico" viewBox="0 0 33 33" aria-hidden="true"><use href="#pd-phone-ico"></use></svg><bdi>03.568.7632</bdi></a>
+    <div class="pd-head-m">
+      <a class="pd-head-tel-m" href="tel:035687632" aria-label="חייגו 03-568-7632"><svg class="pd-tel-ico" viewBox="0 0 33 33" aria-hidden="true"><use href="#pd-phone-ico"></use></svg></a>
+      <label class="pd-burger" for="pd-nav-toggle" aria-label="פתיחת תפריט"><span></span><span></span><span></span></label>
     </div>
-    <label class="pd-burger" for="pd-nav-toggle" aria-label="פתיחת תפריט"><span></span><span></span><span></span></label>
   </div>
   <nav class="pd-mnav" aria-label="ניווט נייד">
     <a href="https://www.peot.org.il/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a2%d7%9e%d7%95%d7%aa%d7%aa-%d7%a9%d7%a2%d7%a8%d7%95%d7%aa-%d7%91%d7%a1%d7%a2%d7%a8%d7%95%d7%aa/">אודותינו</a>
@@ -185,7 +184,7 @@ html,body{margin:0;padding:0;background:#fff}
     <a href="https://www.peot.org.il/#emuna1">נשים מספרות</a>
     <a href="https://www.peot.org.il/category/blog/">בלוג</a>
     <a href="https://www.peot.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/">יצירת קשר</a>
-    <a class="pd-mnav-donate" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
+    <a href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">תרומה</a>
   </nav>
 </header>
 
