@@ -1,7 +1,7 @@
 <!-- wp:html -->
 <div class="peot-donate" dir="rtl">
 <style>
-.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
+.peot-donate{--pd-pink:#C41D72;--pd-dark:#36001C;--pd-rose:#FBEAF2;--pd-rose2:#FDF4F8;--pd-text:#3A0A22;--pd-muted:#7a5566;--pd-head-h:96px;font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-text);line-height:1.7;font-size:18px;overflow-x:hidden}
 .peot-donate *{box-sizing:border-box}
 .peot-donate p{margin:0 0 1em}
 .peot-donate h1,.peot-donate h2,.peot-donate h3{font-family:'Leon',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--pd-dark);line-height:1.2;margin:0 0 .4em;font-weight:bold}
@@ -16,8 +16,33 @@
 .pd-link{display:inline-flex;align-items:center;gap:7px;color:var(--pd-pink);font-weight:bold;text-decoration:none;border-bottom:2px solid rgba(196,29,114,.4);padding-bottom:3px;transition:border-color .2s ease}
 .pd-link:hover{border-color:var(--pd-pink)}
 
+/* ===== SITE HEADER (זהה ל-peot.org.il, tpl 464) - preview only; ב-WP ההאדר מגיע מהתמה ===== */
+.pd-head{position:sticky;top:0;z-index:100;background:#F9E9F2;box-shadow:0 2px 14px rgba(54,0,28,.06)}
+.pd-head-in{max-width:1760px;margin:0 auto;padding:0 5%;min-height:var(--pd-head-h);display:flex;align-items:center;gap:22px}
+.pd-logo{flex-shrink:0;display:inline-flex;align-items:center}
+.pd-logo img{height:62px;width:auto;display:block}
+.pd-nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.pd-nav a{color:var(--pd-dark);text-decoration:none;font-weight:500;font-size:20px;padding:10px 13px;border-radius:8px;white-space:nowrap;transition:color .25s ease}
+.pd-nav a:hover{color:var(--pd-pink)}
+.pd-head-tel{display:inline-flex;align-items:center;gap:9px;color:var(--pd-dark);text-decoration:none;font-weight:600;font-size:20px;letter-spacing:1px;white-space:nowrap;margin-inline-start:auto;flex-shrink:0;transition:color .25s ease}
+.pd-head-tel:hover{color:var(--pd-pink)}
+.pd-tel-ico{width:33px;height:33px;flex-shrink:0;display:block}
+.pd-head-tel bdi{direction:ltr}
+.pd-head-m{display:none;align-items:center;gap:12px;margin-inline-start:auto}
+.pd-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:40px;background:none;border:0;cursor:pointer;padding:0}
+.pd-burger span{display:block;width:26px;height:2px;margin:0 auto;background:var(--pd-dark);border-radius:2px;transition:.25s}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(2){opacity:0}
+.pd-head-toggle:checked ~ .pd-head-in .pd-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.pd-mnav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:#F9E9F2;border-top:1px solid rgba(196,29,114,.12);box-shadow:0 14px 26px rgba(54,0,28,.1);padding:8px 5% 16px}
+.pd-head-toggle:checked ~ .pd-mnav{display:flex}
+.pd-mnav a{color:var(--pd-dark);text-decoration:none;font-weight:500;font-size:1.15rem;padding:13px 4px;border-bottom:1px solid rgba(196,29,114,.09)}
+.pd-mnav a:hover{color:var(--pd-pink)}
+@media(max-width:1024px){.pd-nav{display:none}.pd-head-tel{display:none}.pd-head-m{display:flex}.pd-burger{display:flex}.pd-logo img{height:46px}.peot-donate{--pd-head-h:70px}}
+@media(min-width:1025px){.pd-mnav{display:none !important}.pd-head-m{display:none !important}}
+
 /* ===== HERO (light, video-reveal - matches peot.org.il) ===== */
-.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(94vh,880px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(50px,7vh,88px) 22px 60px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
+.pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(84vh,760px);display:flex;flex-direction:column;justify-content:flex-start;text-align:center;padding:clamp(40px,5vh,66px) 22px 58px;background:linear-gradient(180deg,#FDF4F8 0%,#FBEAF2 52%,#fff 100%)}
 .pd-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .pd-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 2%,#000 88%,transparent 100%);
@@ -32,6 +57,10 @@
 .pd-hero h1 span{color:var(--pd-pink)}
 .pd-lead{font-size:clamp(1.1rem,2.4vw,1.42rem);color:#6b3a52;max-width:660px;margin:0 auto 1.7em;text-shadow:0 1px 10px rgba(255,255,255,.75)}
 .pd-hero-cta{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;align-items:center}
+.pd-hero-badge{position:absolute;z-index:3;top:clamp(24px,3.5vh,38px);inset-inline-start:clamp(20px,4vw,46px);display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(196,29,114,.28);border-radius:50px;padding:9px 18px;box-shadow:0 8px 22px rgba(54,0,28,.12);font-size:.98rem;font-weight:bold;color:var(--pd-dark);line-height:1;letter-spacing:.01em}
+.pd-hero-badge .pd-hb-check{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--pd-pink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.82rem;box-shadow:0 2px 7px rgba(196,29,114,.42)}
+.pd-hero-badge b{color:var(--pd-pink)}
+@media(max-width:600px){.pd-hero-badge{top:auto;bottom:16px;inset-inline-start:auto;left:50%;right:auto;transform:translateX(-50%);font-size:.88rem;padding:8px 18px;gap:9px;white-space:normal;text-align:center;line-height:1.3;max-width:calc(100vw - 26px);background:rgba(255,255,255,.84)}.pd-hero-badge .pd-hb-check{width:22px;height:22px;font-size:.72rem}.pd-scroll{display:none}}
 .pd-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;color:var(--pd-pink);font-size:1.5rem;line-height:1;animation:pdBounce 2.2s ease-in-out infinite;opacity:.7}
 @keyframes pdBounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 @media(prefers-reduced-motion:reduce){
@@ -90,8 +119,24 @@
 .pd-contact .pd-amuta{font-size:.92rem;color:#b394a4}
 .pd-secure{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.95rem;color:#e6c4d6}
 
+/* SECTION 46 / TAX RECOGNITION */
+.pd-tax{max-width:1000px;margin:0 auto;background:#fff;border:1px solid #f3dde8;border-radius:26px;padding:38px 42px;display:flex;align-items:center;gap:34px;box-shadow:0 16px 46px rgba(54,0,28,.09);position:relative;overflow:hidden}
+.pd-tax:before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:6px;background:linear-gradient(180deg,var(--pd-pink),#640838)}
+.pd-tax-badge{flex-shrink:0;width:108px;height:108px;border-radius:50%;background:radial-gradient(circle at 50% 42%,#fff,var(--pd-rose));border:2px dashed var(--pd-pink);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--pd-pink);box-shadow:inset 0 0 0 5px rgba(196,29,114,.08),0 8px 22px rgba(196,29,114,.14)}
+.pd-tax-badge small{font-size:.82rem;letter-spacing:.1em;font-weight:bold;margin-bottom:1px}
+.pd-tax-badge b{font-size:2.5rem;line-height:.9;font-weight:bold}
+.pd-tax-body{flex:1;min-width:0}
+.pd-tax-body h3{font-size:clamp(1.35rem,3vw,1.75rem);color:var(--pd-dark);margin-bottom:.4em}
+.pd-tax-body h3 span{color:var(--pd-pink)}
+.pd-tax-body p{color:var(--pd-muted);font-size:1.06rem;line-height:1.65;margin:0 0 .9em}
+.pd-tax-body .pd-hl{color:var(--pd-pink);font-weight:bold}
+@media(max-width:640px){
+  .pd-tax{flex-direction:column;text-align:center;gap:22px;padding:34px 26px}
+  .pd-tax:before{inset-block:auto;inset-inline:0;top:0;width:auto;height:6px}
+}
+
 @media(max-width:900px){
-  .pd-hero{min-height:90vh;padding:clamp(44px,6vh,72px) 20px 54px}
+  .pd-hero{min-height:calc(100svh - var(--pd-head-h));padding:clamp(28px,4vh,52px) 20px 66px}
   .pd-hero-video{object-position:center 52%}
   .pd-hero-media:after{background:linear-gradient(to bottom,rgba(253,244,248,.58) 0%,rgba(253,244,248,.46) 24%,rgba(251,234,242,.3) 44%,rgba(251,234,242,.15) 62%,rgba(251,234,242,.2) 80%,rgba(253,244,248,.62) 100%),radial-gradient(120% 60% at 50% 0%,rgba(196,29,114,.09),transparent 60%)}
 }
@@ -118,6 +163,10 @@
       <a class="pd-link" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">♡ לתרומה חודשית קבועה</a>
     </div>
   </div>
+  <div class="pd-hero-badge">
+    <span class="pd-hb-check" aria-hidden="true">✓</span>
+    <span>העמותה מוכרת לזיכוי מס ע"פ <b>סעיף 46</b></span>
+  </div>
   <div class="pd-scroll" aria-hidden="true">⌄</div>
 </section>
 
@@ -133,8 +182,8 @@
       <p>באותה תקופה בדיוק ההוצאות נערמות: הטיפולים עצמם, עזרה בבית, שיעורים פרטיים לילדים, ותמיכה במשפחה כולה. פאה רפואית איכותית במספרה עולה כ-20,000 ש"ח - סכום שפשוט לא מתאפשר עבור רוב הנשים, בדיוק בתקופה הכי שברירית בחייהן.</p>
     </div>
     <blockquote class="pd-quote">
-      <p>"אני לא רוצה שהילדים שלי יראו אותי קירחת."</p>
-      <span>המשפט שאמרה אישה אחת בסלון שלנו, ובזכותו נולדה העמותה.</span>
+      <p>"אני לא יכולה לשלם 20,000 ש"ח וגם לדאוג שלא יחסר כלום לילדים שלי."</p>
+      <span>המשפט שאמרה אישה אחת בסלון שלנו, ובזכותו הוקמה העמותה.</span>
     </blockquote>
   </div>
 </section>
@@ -143,8 +192,7 @@
 <section class="pd-sec">
   <div class="pd-wrap">
     <div class="pd-sec-head">
-      <span class="pd-kicker">מה התרומה שלך מפעילה</span>
-      <h2>אנחנו לא מוכרות פאה. אנחנו מלוות אישה.</h2>
+      <h2>אנחנו לא רק מוכרות פאה, אנחנו מלוות אישה</h2>
       <p>מהרגע הראשון ועד שהשיער חוזר לצמוח - מעטפת שלמה, אישית וחמה.</p>
     </div>
     <div class="pd-grid">
@@ -164,11 +212,11 @@
     <div class="pd-value">
       <span class="pd-kicker" style="color:#ffb3d7">הערך שאת נותנת</span>
       <h2>הבחירה שאף אישה לא צריכה לוותר עליה</h2>
-      <p>בזכות התורמים, אישה לא צריכה לבחור בין פאה איכותית לבין ההוצאות של הטיפול והמשפחה. היא ממשיכה להיות עצמה - מקבלת פאה מהשיער הטבעי שלה, יפה ומרשימה, בלי לשבור את החסכונות ובלי לוותר על שום דבר אחר.</p>
+      <p>בזכותכם, אישה לא צריכה לבחור בין פאה רפואית לבין ההוצאות השוטפות של הטיפול והמשפחה. היא מקבלת פאה יפה ומרשימה מהשיער הטבעי, וממשיכה להיות עצמה.</p>
       <div class="pd-stats">
         <div class="pd-stat"><b>20,000 ש"ח</b><small>עלות פאה רפואית במספרה</small></div>
         <div class="pd-stat"><b>מסובסד</b><small>בזכותך, במחיר שכל אישה יכולה לעמוד בו</small></div>
-        <div class="pd-stat"><b>מאות פאות</b><small>ואלפי נשים שכבר ליווינו בדרך</small></div>
+        <div class="pd-stat"><b>אלפי נשים</b><small>שכבר ליווינו</small></div>
       </div>
     </div>
   </div>
@@ -195,8 +243,8 @@
 <section class="pd-sec">
   <div class="pd-wrap">
     <div class="pd-final">
-      <h2>תני יד אחת, ותחזירי לאישה את עצמה</h2>
-      <p>כל תרומה היא הרבה יותר מפאה. היא ביטחון, כבוד, וכוח להמשיך להילחם. תודה שאתם איתנו.</p>
+      <h2>עזרו להן לחייך</h2>
+      <p>התרומה שלכם מאפשרת לנו להעניק לכל אישה פאה רפואית מותאמת אישית, ליווי צמוד וקהילה חמה שיודעת בדיוק מה היא צריכה ברגעים הקשים ביותר.</p>
       <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה מאובטחת</a>
       <div class="pd-secure">🔒 תרומה מאובטחת דרך מערכת הסליקה משולם</div>
     </div>
@@ -205,6 +253,21 @@
       טלפון ווואטסאפ: <a href="tel:035687632">03-568-7632</a><br>
       כתובות: אמרי חיים 14, בני ברק | הגליל 8, חיפה</p>
       <p class="pd-amuta">עמותת שערות בסערות (ע"ר) | מספר עמותה 580763225</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 46 / TAX RECOGNITION ===== -->
+<section class="pd-sec pd-sec--soft">
+  <div class="pd-wrap">
+    <div class="pd-tax">
+      <div class="pd-tax-badge" aria-hidden="true"><small>סעיף</small><b>46</b></div>
+      <div class="pd-tax-body">
+        <h3>אישור מס הכנסה לתרומות <span>לפי סעיף 46</span></h3>
+        <p>עמותת שערות בסערות מוכרת על ידי רשות המסים כמוסד ציבורי לעניין תרומות לפי סעיף 46 לפקודת מס הכנסה. המשמעות פשוטה: <b class="pd-hl">כל תרומה מזכה אתכם בהחזר (זיכוי) מס של 35%</b> מסכום התרומה.</p>
+        <p>עם השלמת התרומה נשלחת אליכם קבלה רשמית - שמרו אותה, וההחזר מגיע אליכם בהתאם לתקרות ולמדרגות שקבע החוק.</p>
+        <a class="pd-link" href="https://www.misim.gov.il/gmtrumot/startPage1.aspx" target="_blank" rel="noopener">לבדיקת האישור באתר רשות המסים <span aria-hidden="true">←</span></a>
+      </div>
     </div>
   </div>
 </section>
