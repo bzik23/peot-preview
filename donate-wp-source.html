@@ -103,19 +103,25 @@
 .pd-stat b{display:block;font-size:2rem;color:#ffb3d7;line-height:1.1;margin-bottom:8px}
 .pd-stat small{font-size:1rem;color:#f1d8e4}
 
-/* AMOUNTS */
-.pd-amounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1000px;margin:0 auto}
-.pd-amt{background:#fff;border:2px solid #f3dde8;border-radius:22px;padding:30px 26px;text-align:center;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.pd-amt:hover{transform:translateY(-6px);border-color:var(--pd-pink);box-shadow:0 20px 46px rgba(196,29,114,.18)}
-.pd-amt .pd-sum{font-size:2.3rem;font-weight:bold;color:var(--pd-pink);line-height:1;margin-bottom:14px}
-.pd-amt p{color:var(--pd-muted);font-size:1.02rem;flex:1;margin-bottom:22px}
-.pd-amt--feat{background:linear-gradient(160deg,#fff,var(--pd-rose));border-color:var(--pd-pink)}
-.pd-amt--feat .pd-sum{font-size:1.7rem}
-
 /* FINAL CTA */
 .pd-final{text-align:center;background:radial-gradient(120% 140% at 50% 0%,#5a0530,var(--pd-dark));color:#fff;border-radius:28px;padding:72px 36px;max-width:980px;margin:0 auto}
 .pd-final h2{color:#fff;font-size:clamp(1.8rem,4vw,2.7rem);max-width:680px;margin:0 auto .5em}
 .pd-final p{color:#f1d8e4;font-size:1.15rem;max-width:600px;margin:0 auto 2em}
+.pd-final h3{color:#fff;font-size:clamp(1.3rem,2.8vw,1.8rem);max-width:640px;margin:0 auto .5em}
+
+/* AMOUNTS (4 קוביות בתוך קוביית ה-CTA, על הרקע הכהה) */
+.pd-amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:14px 0 44px;text-align:center}
+.pd-final .pd-amt{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:24px 16px;text-align:center;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.pd-final .pd-amt:hover{transform:translateY(-5px);border-color:var(--pd-pink);background:rgba(255,255,255,.12)}
+.pd-final .pd-amt .pd-sum{font-size:1.9rem;font-weight:bold;color:#ffb3d7;line-height:1.1;margin-bottom:10px}
+.pd-final .pd-amt p{color:#f1d8e4;font-size:.95rem;line-height:1.55;flex:1;max-width:none;margin:0 0 18px}
+.pd-final .pd-amt--feat{background:rgba(196,29,114,.24);border-color:rgba(255,179,215,.6)}
+.pd-final .pd-amt--feat .pd-sum{font-size:1.28rem;line-height:1.25}
+.pd-final .pd-amt .pd-btn{padding:12px 18px;font-size:.97rem;justify-content:center}
+.pd-final .pd-btn-ghost{background:transparent;color:#fff !important;border:2px solid rgba(255,179,215,.55);box-shadow:none}
+.pd-final .pd-btn-ghost:hover{background:var(--pd-pink);border-color:var(--pd-pink);color:#fff !important}
+@media(max-width:880px){.pd-amounts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.pd-amounts{grid-template-columns:1fr}}
 .pd-contact{margin-top:54px;text-align:center;color:var(--pd-muted);font-size:1rem;line-height:2}
 .pd-contact a{color:var(--pd-pink);text-decoration:none;font-weight:bold}
 .pd-contact .pd-amuta{font-size:.92rem;color:#b394a4}
@@ -213,28 +219,20 @@
     <div class="pd-final">
       <h2>עזרו להן לחייך</h2>
       <p>התרומה שלכם מאפשרת לנו להעניק לכל אישה פאה רפואית מותאמת אישית, ליווי צמוד וקהילה חמה שיודעת בדיוק מה היא צריכה ברגעים הקשים ביותר. יחד ניתן לעוד אישה את האפשרות להסתכל על עצמה ולחייך.</p>
+      <div class="pd-amounts">
+        <div class="pd-amt"><div class="pd-sum">50 ₪</div><p>משתתפים בערכת טיפוח ותחזוקה שתשמור על הפאה יפה וטבעית לאורך זמן.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+        <div class="pd-amt"><div class="pd-sum">100 ₪</div><p>תורמים למפגש התאמה וליווי אישי לאישה אחת בתחילת הדרך.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+        <div class="pd-amt"><div class="pd-sum">500 ₪</div><p>מסייעים במימון חומרי הגלם לתפירת פאה מהשיער הטבעי של מתמודדת.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
+        <div class="pd-amt pd-amt--feat"><div class="pd-sum">סכום אחר / הוראת קבע</div><p>בחרו כל סכום שמתאים לכם. תרומה חודשית קבועה מאפשרת לנו לתכנן קדימה וללוות עוד נשים, לאורך זמן.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה חודשית</a></div>
+      </div>
+      <h3>כל סכום הופך לרגע של ביטחון</h3>
+      <p>תרומה חד-פעמית או הוראת קבע חודשית - כל אחת ואחד לפי היכולת. כל שקל מקרב עוד אישה לרגע שבו היא מסתכלת במראה ומחייכת.</p>
       <a class="pd-btn pd-btn-lg" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה מאובטחת</a>
       <div class="pd-secure">🔒 תרומה מאובטחת דרך מערכת הסליקה משולם</div>
     </div>
   </div>
 </section>
 
-<!-- ===== AMOUNTS ===== -->
-<section class="pd-sec pd-sec--rose">
-  <div class="pd-wrap">
-    <div class="pd-sec-head">
-      <span class="pd-kicker">בחרו סכום, ראו את ההשפעה</span>
-      <h2>כל סכום הופך לרגע של ביטחון</h2>
-      <p>תרומה חד-פעמית או הוראת קבע חודשית - כל אחת ואחד לפי היכולת. כל שקל מקרב עוד אישה לרגע שבו היא מסתכלת במראה ומחייכת.</p>
-    </div>
-    <div class="pd-amounts">
-      <div class="pd-amt"><div class="pd-sum">50 ₪</div><p>משתתפים בערכת טיפוח ותחזוקה שתשמור על הפאה יפה וטבעית לאורך זמן.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
-      <div class="pd-amt"><div class="pd-sum">100 ₪</div><p>תורמים למפגש התאמה וליווי אישי לאישה אחת בתחילת הדרך.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
-      <div class="pd-amt"><div class="pd-sum">500 ₪</div><p>מסייעים במימון חומרי הגלם לתפירת פאה מהשיער הטבעי של מתמודדת.</p><a class="pd-btn pd-btn-ghost" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה</a></div>
-      <div class="pd-amt pd-amt--feat"><div class="pd-sum">סכום אחר / הוראת קבע</div><p>בחרו כל סכום שמתאים לכם. תרומה חודשית קבועה מאפשרת לנו לתכנן קדימה וללוות עוד נשים, לאורך זמן.</p><a class="pd-btn" href="https://meshulam.co.il/purchase?b=880c19ce665901b0c4dc4552e6083228" target="_blank" rel="noopener">לתרומה חודשית</a></div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== CONTACT ===== -->
 <section class="pd-sec">
